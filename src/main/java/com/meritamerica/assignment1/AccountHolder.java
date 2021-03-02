@@ -1,79 +1,80 @@
 package com.meritamerica.assignment1;
 
 public class AccountHolder {
-	private static final String OpeningBalance = null;
-	private CheckingAccount openingBalance;
-	private double getBalance;
-	private double getInterestRate;
-	private boolean withdraw;
-	private boolean deposit;
-	private double futureValue;
-	
-	public double OpeningBalance() {
-		return futureValue;}
-	
-	CheckingAccount(
-			
-			double openingBalance,
-			double getBalance, 
-			double getInterestRate,
-			boolean withdraw,
-			boolean deposit,
-			double futureValue
-			
-			) {
-		this.getBalance = getBalance;
-		this.getInterestRate = getInterestRate;
-		this.withdraw =withdraw;
-		this.deposit = deposit;
-		this.futureValue = futureValue;
-		openingBalance = new openingBalance(OpeningBalance);
-
-	}
-
-	
-	public double getBalance() {
-		return getBalance;
-	}
-	
-	public void deposit(double amount) {
 		
-		if (amount<=0) {
-			System.out.println("Amount entered is invalid");
-		}
-		else
-		{
-			getBalance = getBalance + amount;
-			openingBalance.deposit(amount) ;
-			return;
-		}
-	}
+	private String firstName;
+	private String lastName;
+	private String middleName;
+	private String ssn;
+	private CheckingAccount checkingAccount;
+	private SavingsAccount savingsAccount;
 	
-	public void withdraw(double amount) {
+	AccountHolder(
 		
-		if (amount<=0) {
-			System.out.println("Amount entered is invalid");
-		}
-		else 
-		{
-			if (getBalance < amount) {
-				System.out.println("Insufficient funds");
-			}
-				else {
-					getBalance = getBalance - amount;
-				}
-		}
-		openingBalance.withdraw(amount);
-		return;
-		}
-	
-	public void futureValue(int years, int presentValue) {
-			
-			if (years != 1) {
-				return (presentValue * ((presentValue * 0.01), years - 1));
-			}
-			else {
-			return presentValue;
-		}
+	String firstName,
+	String middleName,
+	String lastName,
+	String ssn,
+	double checkingAccountOpeningBalance,
+	double savingsAccountOpeningBalance
+	){
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.middleName = middleName;
+		this.ssn = ssn;
+		checkingAccount = new CheckingAccount(checkingAccountOpeningBalance);
+		savingsAccount = new SavingsAccount(savingsAccountOpeningBalance);
 	}
-}
+	
+	
+	public static void accountHolder() {}
+		
+	public String getFirstName() {
+		return firstName;
+	}
+	
+	void setFirstName(String firstName){
+		this.firstName = firstName;
+	}
+	
+	public String getMiddleName() {
+		return middleName;
+	}
+	
+	void setMiddleName(String middleName) {
+		this.middleName = middleName;
+	}
+	
+	public String getLastName() {
+		return lastName;
+	}
+	
+	void setLastName(String lastName){
+		this.lastName = lastName;
+	}
+	
+	public String getSSN() {
+		return ssn;
+	}
+	
+	void setSSN(String ssn) {
+		this.ssn = ssn;
+	}
+	
+	public void CheckingAccount(getCheckingAccount) {
+		return this.checkingAccount;
+	}
+	
+	public SavingsAccount(double getSavingsAccount) {
+		return this.savingsAccount;
+	}
+	
+	String toString() 
+	{
+		return "\nName:" + getFirstName() + " " +getMiddleName() + " " + getLastName() + " " +
+				"\nSSN:" + getSSN() + "\n" + getCheckingAccount() +"\n" + getSavingsAccount();
+		
+		}
+
+	
+	}
